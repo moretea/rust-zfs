@@ -1,0 +1,11 @@
+[package]
+name = "zfs-sys"
+version = "0.1.0"
+authors = ["Maarten Hoogendoorn <maarten@moretea.nl>"]
+build = "build.rs"
+
+[dependencies]
+nvpair = { path = "../nvpair" }
+
+[build-dependencies]
+pkg-config = "0.3"
