@@ -1,7 +1,7 @@
 sudo: true
 
 install:
-  - curl https://nixos.org/nix/install | sudo sh
+  - curl https://nixos.org/nix/install | sh
 
 env:
   - TESTFOLDER=.
