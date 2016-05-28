@@ -1,17 +1,19 @@
 extern crate zfs_sys;
 
-enum Error {
+pub mod zpool;
+#[derive(Debug)]
+pub enum Error {
     CouldNotInitialize
 }
 
-type Result<T> = std::result::Result<T, Error>;
+pub type Result<T> = std::result::Result<T, Error>;
 
 pub struct Handle {
     handle: *mut zfs_sys::libzfs_handle_t
 }
 
 impl Handle {
-    fn new() -> Result<Handle> {
+    pub fn new() -> Result<Handle> {
         let raw = unsafe { zfs_sys::libzfs_init() };
         if raw == std::ptr::null_mut() {
             return Err(Error::CouldNotInitialize);

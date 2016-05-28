@@ -1,6 +1,6 @@
-pub extern crate nvpair_sys as ffi;
+extern crate nvpair_sys;
 
-//pub use nvpair_sys as ffi;
+pub use nvpair_sys as ffi;
 
 use std::borrow::Cow;
 use std::ptr;

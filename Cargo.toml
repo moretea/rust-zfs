@@ -3,5 +3,9 @@ name = "zfs"
 version = "0.1.0"
 authors = ["Maarten Hoogendoorn <maarten@moretea.nl>"]
 
+[[test]]
+name="integration"
+harness=false
+
 [dependencies]
 zfs-sys = { path = "zfs-sys" }
