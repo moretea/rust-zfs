@@ -1,4 +1,7 @@
 sudo: true
+cache:
+  directories:
+    - /nix
 
 install:
   - curl https://nixos.org/nix/install | sh
