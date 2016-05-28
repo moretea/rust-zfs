@@ -3,8 +3,5 @@ sudo: true
 install:
   - curl https://nixos.org/nix/install | sh
 
-env:
-  - TESTFOLDER=.
-
 script:
-  - "cd $TEST_FOLDER; ./test.sh"
+  - .travis.sh
